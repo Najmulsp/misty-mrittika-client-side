@@ -27,7 +27,7 @@ const Banner = () => {
             data-aos-delay="2000"
             className="text-4xl font-extrabold text-orange-500 text-center pt-4 lg:pt-32"
           >
-            Welcome to Nest Plaza
+            Welcome to Misty Mrittika
           </h1>
           <p
             data-aos="fade-left"
