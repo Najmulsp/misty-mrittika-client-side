@@ -2,8 +2,9 @@ import { createBrowserRouter } from "react-router-dom";
 import ErrorPage from "../Layouts/ErrorPage";
 import Root from "../Layouts/Root";
 import Home from "./Home";
-// import Login from "../Login";
-// import Register from "../Register";
+import Login from "../Authentication/Login";
+import Register from "../Authentication/Register";
+
 // import Profile from "../Profile";
 // import Properties from "../PrivetRoute/Properties";
 // import ProtectedProperty from "../PrivetRoute/ProtectedProperty";
@@ -44,14 +45,14 @@ const router = createBrowserRouter([
     //       </ProtectedAgents>
     //     ),
     //   },
-    //   {
-    //     path: "/login",
-    //     element: <Login></Login>,
-    //   },
-    //   {
-    //     path: "/register",
-    //     element: <Register></Register>,
-    //   },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
 
     //   {
     //     path: "/updateProfile",

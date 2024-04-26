@@ -47,9 +47,9 @@ const Navbar = () => {
           className={({ isActive }) =>
             isActive ? "border-2 border-amber-400  font-bold" : ""
           }
-          to="/contact"
+          to="/allArt"
         >
-          Contact Us
+          All Art & craft
         </NavLink>
       </li>
       <li>
@@ -57,9 +57,19 @@ const Navbar = () => {
           className={({ isActive }) =>
             isActive ? "border-2 border-amber-400  font-bold" : ""
           }
-          to="/agents"
+          to="/addCraft"
         >
-          Our Agents
+          Add Craft
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "border-2 border-amber-400  font-bold" : ""
+          }
+          to="/myArt"
+        >
+          My Art & Craft List
         </NavLink>
       </li>
       <li>
@@ -82,16 +92,7 @@ const Navbar = () => {
           Register
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? "border-2 border-amber-400  font-bold" : ""
-          }
-          to="/updateProfile"
-        >
-          Your Profile
-        </NavLink>
-      </li>
+      
     </>
   );
 
