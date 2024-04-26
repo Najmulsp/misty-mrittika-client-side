@@ -140,8 +140,35 @@ const AddCraft = () => {
                 className="w-full border-2 rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300 p-3"
               />
             </div>
+            {/* <option value="Test" selected>
+                  Test
+                </option>
+                <option value="Test2" selected>
+                  Test2
+                </option> customization */}
+            <div className="col-span-full sm:col-span-3">
+              <label
+                htmlFor="website"
+                className="text-sm p-1 flex justify-start"
+              >
+                Customization
+              </label>
+              <select
+                name="customization"
+                type="text"
+                placeholder="Details "
+                className="w-full border-2 rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300 p-3 "
+              >
+                <option value="Yes" selected>
+                  Yes
+                </option>
+                <option value="No" selected>
+                  No
+                </option>
+              </select>
+            </div>
             {/* photo url */}
-            <div className="col-span-full ">
+            <div className="col-span-full sm:col-span-3">
               <label htmlFor="bio" className="text-sm p-1 flex justify-start">
                 Photo
               </label>
