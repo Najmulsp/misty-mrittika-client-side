@@ -5,7 +5,7 @@ const Footer = () => {
         <footer className="footer p-10 bg-base-200 text-base-content mt-10">
   <aside>
   <FaHome className="text-5xl"/>
-    <p>Nest Plaza Residential Home<br/>Providing reliable residential services since 1992</p>
+    <p>Misty Mrittika Ceramics Store<br/>Providing reliable residential services since 1992</p>
   </aside> 
   <nav>
     <h6 className="footer-title">Services</h6> 

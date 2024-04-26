@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
-import { useNavigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 const MyCraftList = () => {
   const { user } = useContext(AuthContext);
@@ -33,7 +33,9 @@ const MyCraftList = () => {
               </h2>
               <p>{craft.description}</p>
               <div className="card-actions justify-end">
+                <Link to={`/updateMyCraft/${craft._id}`}>
                 <div className="badge badge-outline">Update</div>
+                </Link>
                 <div className="badge badge-outline">Delete</div>
               </div>
             </div>

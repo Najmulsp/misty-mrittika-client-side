@@ -7,6 +7,7 @@ import Register from "../Authentication/Register";
 import AddCraft from "../PrivetRoutes/AddCraft";
 import MyCraftList from "../PrivetRoutes/MyCraftList";
 import ProtectedRoute from "../PrivetRoutes/ProtectedRoute";
+import UpdateMyCraft from "../PrivetRoutes/UpdateMyCraft";
 
 
 // import Properties from "../PrivetRoute/Properties";
@@ -40,6 +41,16 @@ const router = createBrowserRouter([
     //     path: "/contact",
     //     element: <ContactUs></ContactUs>,
     //   },
+    
+    
+    {
+      path: "/addCraft",
+      element: (
+        <ProtectedRoute>
+          <AddCraft></AddCraft>
+         </ProtectedRoute>
+      ),
+    },
     {
       path: "/myCraftList",
       element: (
@@ -48,13 +59,12 @@ const router = createBrowserRouter([
           </ProtectedRoute>
       ),
     },
-    
     {
-      path: "/addCraft",
+      path: "/updateMyCraft/:id",
       element: (
         <ProtectedRoute>
-          <AddCraft></AddCraft>
-         </ProtectedRoute>
+          <UpdateMyCraft></UpdateMyCraft>
+          </ProtectedRoute>
       ),
     },
       {
