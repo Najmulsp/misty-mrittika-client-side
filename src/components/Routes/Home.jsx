@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import Banner from "./Banner";
+import CraftItems from "./CraftItems";
 // import { useLoaderData } from "react-router-dom";
 // import Estates from "./Estates";
 // import OurExpert from "./Routes/OurExpert";
@@ -15,6 +16,7 @@ const Home = () => {
       </Helmet>
 
       <Banner></Banner>
+      <CraftItems></CraftItems>
       {/* <div className="mt-10">
         <h1
           data-aos="fade-right"

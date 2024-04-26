@@ -4,14 +4,17 @@ import Root from "../Layouts/Root";
 import Home from "./Home";
 import Login from "../Authentication/Login";
 import Register from "../Authentication/Register";
+import AddCraft from "../PrivetRoutes/AddCraft";
+import MyCraftList from "../PrivetRoutes/MyCraftList";
+import ProtectedRoute from "../PrivetRoutes/ProtectedRoute";
 
-// import Profile from "../Profile";
+
 // import Properties from "../PrivetRoute/Properties";
 // import ProtectedProperty from "../PrivetRoute/ProtectedProperty";
 // import ProtectedProfile from "../PrivetRoute/ProtectedProfile";
 // import ContactUs from "./ContactUs";
 // import ProtectedAgents from "../PrivetRoute/ProtectedAgents";
-// import OurAgents from "../PrivetRoute/OurAgents";
+
 
 const router = createBrowserRouter([
   {
@@ -37,14 +40,23 @@ const router = createBrowserRouter([
     //     path: "/contact",
     //     element: <ContactUs></ContactUs>,
     //   },
-    //   {
-    //     path: "/agents",
-    //     element: (
-    //       <ProtectedAgents>
-    //         <OurAgents></OurAgents>
-    //       </ProtectedAgents>
-    //     ),
-    //   },
+    {
+      path: "/myCraftList",
+      element: (
+        <ProtectedRoute>
+          <MyCraftList></MyCraftList>
+          </ProtectedRoute>
+      ),
+    },
+    
+    {
+      path: "/addCraft",
+      element: (
+        <ProtectedRoute>
+          <AddCraft></AddCraft>
+         </ProtectedRoute>
+      ),
+    },
       {
         path: "/login",
         element: <Login></Login>,
@@ -54,14 +66,6 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
 
-    //   {
-    //     path: "/updateProfile",
-    //     element: (
-    //       <ProtectedProfile>
-    //         <Profile></Profile>
-    //       </ProtectedProfile>
-    //     ),
-    //   },
     ],
   },
 ]);

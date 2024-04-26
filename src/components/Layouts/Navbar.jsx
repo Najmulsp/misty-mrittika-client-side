@@ -67,7 +67,7 @@ const Navbar = () => {
           className={({ isActive }) =>
             isActive ? "border-2 border-amber-400  font-bold" : ""
           }
-          to="/myArt"
+          to="/myCraftList"
         >
           My Art & Craft List
         </NavLink>
