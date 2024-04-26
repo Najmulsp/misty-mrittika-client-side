@@ -6,7 +6,7 @@ import {
     signInWithEmailAndPassword,
     signInWithPopup,
     signOut,
-    updateProfile,
+    // updateProfile,
   } from "firebase/auth";
   import { createContext, useEffect, useState } from "react";
 //   import auth from "../../Firebase/FirebaseConfig";
@@ -36,14 +36,14 @@ import app from "../components/Firebase/Firebase.config";
     };
   
     // update user profile
-    const updateUserProfile = (name, photo) => {
-      return updateProfile(auth.currentUser, {
-        displayName: name,
-        photoURL: photo,
-      }).then(() => {
-        setUser({ ...user, displayName: name, photoURL: photo });
-      });
-    };
+    // const updateUserProfile = (name, photo) => {
+    //   return updateProfile(auth.currentUser, {
+    //     displayName: name,
+    //     photoURL: photo,
+    //   }).then(() => {
+    //     setUser({ ...user, displayName: name, photoURL: photo });
+    //   });
+    // };
   
     //  observer
     useEffect(() => {
@@ -89,7 +89,7 @@ import app from "../components/Firebase/Firebase.config";
       logout,
       googleLogin,
       githubLogin,
-      updateUserProfile,
+    //   updateUserProfile,
     };
     return (
       <AuthContext.Provider value={authInfo}>

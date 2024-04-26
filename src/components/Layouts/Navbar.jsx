@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-// import { AuthContext } from "./Providers/AuthProvider";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Navbar = () => {
-//   const { user, logout } = useContext(AuthContext);
+  const { user, logout } = useContext(AuthContext);
   const [theme, setTheme] = useState("light");
   useEffect(() => {
     localStorage.setItem("theme", theme);
@@ -19,16 +19,16 @@ const Navbar = () => {
     }
   };
 
-  // log out
-//   const handleLogout = () => {
-//     logout()
-//       .then((result) => {
-//         console.log(result.user);
-//       })
-//       .catch((error) => {
-//         console.error(error);
-//       });
-//   };
+  //log out
+  const handleLogout = () => {
+    logout()
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
 
   const navlinks = (
     <>
@@ -132,7 +132,7 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navlinks}</ul>
       </div>
        <div className="navbar-end  gap-4">
-        {/* {user ? (
+         {user ? (
           <div className="flex items-center gap-4">
             <div className="flex flex-col items-center">
               <img
@@ -153,7 +153,7 @@ const Navbar = () => {
           <Link className="btn px-6 btn-success" to="/login">
             Login
           </Link>
-        )}*/}
+        )}
 
         <label className="swap swap-rotate">
            {/* this hidden checkbox controls the state  */}
