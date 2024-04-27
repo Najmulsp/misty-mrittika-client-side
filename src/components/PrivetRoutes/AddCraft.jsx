@@ -1,23 +1,29 @@
+import { useContext } from 'react';
 import Swal from 'sweetalert2'
 import { AuthContext } from '../../providers/AuthProvider';
-import { useContext } from 'react';
+
 
 const AddCraft = () => {
-    const {user} = useContext(AuthContext);
+  const {user} = useContext(AuthContext);
 
     const handleAddCraft = e =>{
         e.preventDefault();
         // get email of user
-        const email =user.email;
+        
+
+        const email = user.email;
         const name = e.target.name.value;
         const subcategory = e.target.subcategory.value;
         const price = e.target.price.value;
         const time = e.target.time.value;
         const rating = e.target.rating.value;
         const description = e.target.description.value;
+        const stockStatus = e.target.stockStatus.value;
+        const userName = e.target.userName.value;
+        // const email = e.target.email.value;
         const photo = e.target.photo.value;
         
-        const newCraft = {name, subcategory, price, time, rating, description, photo, email}
+        const newCraft = {name, subcategory, price, time, rating, description,stockStatus, userName, email,  photo }
 
         // console.log(newCraft)
         
@@ -32,10 +38,10 @@ const AddCraft = () => {
             console.log(data)
             if(data?.insertedId){
               Swal.fire({
-                title: 'success!',
+                title: 'Success!',
                 text: 'Your craft added successfully',
                 icon: 'success',
-                confirmButtonText: 'Cool'
+                confirmButtonText: 'OK'
               })
             }
         })
@@ -73,12 +79,31 @@ const AddCraft = () => {
               >
                 Subcategory
               </label>
-              <input
+              <select
                 name="subcategory"
                 type="text"
                 placeholder="Available quantity"
                 className="w-full border-2  rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 dark:border-gray-300 p-3"
-              />
+              >
+                <option value="Yes" selected>
+                Clay-made pottery
+                </option>
+                <option value="No" selected>
+                Stoneware
+                </option>
+                <option value="No" selected>
+                Porcelain
+                </option>
+                <option value="No" selected>
+                Terra Cotta
+                </option>
+                <option value="No" selected>
+                Ceramics & Architectural
+                </option>
+                <option value="No" selected>
+                Home decor pottery
+                </option>
+                </select>
             </div>
             {/* Price */}
             <div className="col-span-full sm:col-span-3">
@@ -162,8 +187,62 @@ const AddCraft = () => {
                 </option>
               </select>
             </div>
-            {/* photo url */}
+                  {/* stock Status */}
             <div className="col-span-full sm:col-span-3">
+              <label
+                htmlFor="website"
+                className="text-sm p-1 flex justify-start"
+              >
+                Stock Status
+              </label>
+              <select
+                name="stockStatus"
+                type="text"
+                placeholder="Stock Status"
+                className="w-full border-2 rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 dark:border-gray-300 p-3"
+              >
+                <option value="Yes" selected>
+                In stock
+                </option>
+                <option value="No" selected>
+                Made to Order
+                </option>
+              </select>
+            </div>
+
+            {/* User Name */}
+            <div className="col-span-full sm:col-span-3">
+              <label
+                htmlFor="website"
+                className="text-sm p-1 flex justify-start"
+              >
+                User Name
+              </label>
+              <input
+                name="userName"
+                type="text"
+                placeholder="Your Name"
+                className="w-full border-2 rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 dark:border-gray-300 p-3"
+              />
+            </div>
+
+            {/* User Email */}
+            {/* <div className="col-span-full sm:col-span-3">
+              <label
+                htmlFor="website"
+                className="text-sm p-1 flex justify-start"
+              >
+                User Email
+              </label>
+              <input
+                name="email"
+                type="email"
+                placeholder="Your Email"
+                className="w-full border-2 rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 dark:border-gray-300 p-3"
+              />
+            </div> */}
+            {/* photo url */}
+            <div className="col-span-full">
               <label htmlFor="bio" className="text-sm p-1 flex justify-start">
                 Photo
               </label>

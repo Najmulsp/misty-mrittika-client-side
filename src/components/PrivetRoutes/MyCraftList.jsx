@@ -46,14 +46,15 @@ const MyCraftList = () => {
     });
   };
   return (
-    <div className="w-full grid grid-cols-2 p-10 mx-auto gap-6 border ">
+    <div className="w-full  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-10 mx-auto gap-6 border justify-around">
       {myCraft.map((craft) => (
         <div key={craft._id}>
           <div className="card w-96 bg-base-100 shadow-xl">
             <figure>
               <img
-                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                alt="Shoes"
+                src={craft.photo}
+                alt="images"
+                className="h-72"
               />
             </figure>
             <div className="card-body">

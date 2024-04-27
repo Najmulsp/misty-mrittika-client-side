@@ -8,13 +8,8 @@ import AddCraft from "../PrivetRoutes/AddCraft";
 import MyCraftList from "../PrivetRoutes/MyCraftList";
 import ProtectedRoute from "../PrivetRoutes/ProtectedRoute";
 import UpdateMyCraft from "../PrivetRoutes/UpdateMyCraft";
+import AllCraft from "./AllCraft";
 
-
-// import Properties from "../PrivetRoute/Properties";
-// import ProtectedProperty from "../PrivetRoute/ProtectedProperty";
-// import ProtectedProfile from "../PrivetRoute/ProtectedProfile";
-// import ContactUs from "./ContactUs";
-// import ProtectedAgents from "../PrivetRoute/ProtectedAgents";
 
 
 const router = createBrowserRouter([
@@ -26,23 +21,13 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("/Estate.json"),
+        loader: async() => fetch('http://localhost:5000/crafts')
       },
-    //   {
-    //     path: "/estate/:id",
-    //     loader: () => fetch(`/Estate.json`),
-    //     element: (
-    //       <ProtectedProperty>
-    //         <Properties></Properties>
-    //       </ProtectedProperty>
-    //     ),
-    //   },
-    //   {
-    //     path: "/contact",
-    //     element: <ContactUs></ContactUs>,
-    //   },
-    
-    
+      {
+        path: "/allCraft",
+        element: <AllCraft></AllCraft> ,   
+        loader: () => fetch('http://localhost:5000/crafts'),
+      },
     {
       path: "/addCraft",
       element: (
