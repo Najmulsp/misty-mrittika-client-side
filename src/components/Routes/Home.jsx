@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import Banner from "./Banner";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 
 const Home = () => {
@@ -16,6 +16,9 @@ const Home = () => {
       <Banner></Banner>
 
       {/* craft items section */}
+      <div className="mt-10">
+        <h1 className="text-4xl text-center p-4">Craft Items</h1>
+        <p className="text-center">paragraph</p>
       <div className="w-full  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-10 mx-auto gap-6 border justify-around">
         {craftItems.map((craft) => (
           <div key={craft._id}>
@@ -30,16 +33,17 @@ const Home = () => {
                 </h2>
                 <p>{craft.description}</p>
                 <div className="card-actions justify-end">
-                  <button className="btn btn-primary">Update</button>
-
-                  <button className="btn btn-secondary">Delete</button>
+                  <Link to={`/craftDetails/${craft._id}`}>
+                  <button className="btn btn-primary">View Details</button>
+                  </Link> 
+                  <button className="btn btn-secondary">Order Now</button>
                 </div>
               </div>
             </div>
           </div>
         ))}
       </div>
-
+      </div>
       {/* another sention */}
     </div>
   );

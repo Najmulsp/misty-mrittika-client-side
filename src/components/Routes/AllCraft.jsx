@@ -3,7 +3,7 @@ import { useLoaderData } from "react-router-dom";
 
 const AllCraft = () => {
     const allCraft = useLoaderData();
-    console.log(allCraft);
+    // console.log(allCraft);
     return (
         <div className="w-full  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-10 mx-auto gap-6 border justify-around">
       {allCraft.map((craft) => (
