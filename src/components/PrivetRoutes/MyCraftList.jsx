@@ -46,38 +46,37 @@ const MyCraftList = () => {
     });
   };
   return (
-    <div className="w-full  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-10 mx-auto gap-6 border justify-around">
-      {myCraft.map((craft) => (
-        <div key={craft._id}>
-          <div className="card w-96 bg-base-100 shadow-xl">
-            <figure>
-              <img
-                src={craft.photo}
-                alt="images"
-                className="h-72"
-              />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title">
-                {craft.name}
-                <div className="badge badge-secondary">NEW</div>
-              </h2>
-              <p>{craft.description}</p>
-              <div className="card-actions justify-end">
-                <Link to={`/updateMyCraft/${craft._id}`}>
-                  <button className="btn btn-primary">Update</button>
-                </Link>
-                <button
-                  onClick={() => handleDeleteMyCraft(craft._id)}
-                  className="btn btn-secondary"
-                >
-                  Delete
-                </button>
+    <div>
+      
+      <div className="w-full  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-10 mx-auto gap-6 border justify-around">
+        {myCraft.map((craft) => (
+          <div key={craft._id}>
+            <div className="card rounded-md w-96 bg-base-100 shadow-xl">
+              <figure>
+                <img src={craft.photo} alt="images" className="h-72 w-full" />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title">
+                  {craft.name}
+                  <div className="badge badge-secondary">NEW</div>
+                </h2>
+                <p>{craft.description}</p>
+                <div className="card-actions justify-end">
+                  <Link to={`/updateMyCraft/${craft._id}`}>
+                    <button className="btn btn-primary">Update</button>
+                  </Link>
+                  <button
+                    onClick={() => handleDeleteMyCraft(craft._id)}
+                    className="btn btn-secondary"
+                  >
+                    Delete
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

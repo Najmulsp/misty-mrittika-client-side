@@ -10,6 +10,7 @@ import ProtectedRoute from "../PrivetRoutes/ProtectedRoute";
 import UpdateMyCraft from "../PrivetRoutes/UpdateMyCraft";
 import AllCraft from "./AllCraft";
 import CraftDetails from "../PrivetRoutes/CraftDetails";
+import AllCategories from "./AllCategories";
 
 
 
@@ -31,12 +32,16 @@ const router = createBrowserRouter([
           <CraftDetails></CraftDetails>  
         </ProtectedRoute>
         ),
-      //   loader: ({params}) => fetch(`http://localhost:5000/crafts/${params.id}`),
        },
       {
         path: "/allCraft",
         element: <AllCraft></AllCraft> ,   
         loader: () => fetch('http://localhost:5000/crafts'),
+      },
+      {
+        path: "/allCategories",
+        element: <AllCategories></AllCategories>,   
+        loader: () => fetch('http://localhost:5000/subcategories'),
       },
     {
       path: "/addCraft",

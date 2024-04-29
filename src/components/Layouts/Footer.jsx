@@ -5,14 +5,17 @@ const Footer = () => {
         <footer className="footer p-10 bg-base-200 text-base-content mt-10">
   <aside>
   <FaHome className="text-5xl"/>
-    <p>Misty Mrittika Ceramics Store<br/>Providing reliable residential services since 1992</p>
+    <p className="text-3xl">Misty Mrittika <span className="text-xl">Arts And Crafting</span>
+    <br/>
+    <span className="text-2xl">©2021 Misty Mrittika. ALL RIGHTS RESERVED.</span>
+    </p>
   </aside> 
   <nav>
     <h6 className="footer-title">Services</h6> 
-    <a className="link link-hover">Single Family</a>
-    <a className="link link-hover">Townhouses</a>
-    <a className="link link-hover">Apartments</a>
-    <a className="link link-hover">Student Housing</a>
+    <a className="link link-hover">Shipping</a>
+    <a className="link link-hover">Wishlist</a>
+    <a className="link link-hover">My Cart</a>
+    <a className="link link-hover">Returns</a>
   </nav> 
   <nav>
     <h6 className="footer-title">Company</h6> 

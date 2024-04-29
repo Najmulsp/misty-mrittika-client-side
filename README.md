@@ -1,16 +1,16 @@
-# Misty Mrittika
+# Misty Mrittika Ceramics Store
 
 ## my website link: 
 
 #### Packages I have used:
--React Leflet
+-React-simple-typewriter
+-React Awesome reveal
 -Swiper slider
--Aos
 
 
 #### featured and characteristics:
-- This is a real estate website in residential view.
+- This is an arts and crafts website in Ceramics and Pottery view.
 - I have used tailwind css and daisy ui for design my website because both of them are easy to used.
-- I have also swiper slider for sliding my banner.
 - I have used react router for routing my website.
-- I have used aos for animate my web page.
+- I have also swiper slider for sliding my banner.
+- I have used React Awesome reveal for animate my web page.

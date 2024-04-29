@@ -4,6 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { Fade } from "react-awesome-reveal";
 
 const Banner = () => {
   return (
@@ -20,8 +21,8 @@ const Banner = () => {
         data-aos-duration="2000"
         data-aos-delay="1000"
       >
-        <div className='bg-[url("https://i.ibb.co/yV4vx7F/crafts-banner-image-1.jpg")] object-cover bg-no-repeat bg-cover rounded-2xl  bg-[#12132D] w-full h-[450px] lg:h-[550px]'>
-        {/* <div className='bg-[url("https://i.ibb.co/jMD5BRN/banner-image-1.jpg")] object-cover bg-no-repeat bg-cover rounded-2xl  bg-[#12132D] w-full h-[450px] lg:h-[550px]'> */}
+        <div className='bg-[url("https://i.ibb.co/yV4vx7F/crafts-banner-image-1.jpg")] object-cover bg-no-repeat bg-cover rounded-xl  bg-[#12132D] w-full h-[450px] lg:h-[550px]'>
+        <Fade direction="down">
           <h1
             data-aos="fade-right"
             data-aos-duration="2000"
@@ -29,26 +30,25 @@ const Banner = () => {
             className="text-4xl font-extrabold text-orange-500 text-center pt-4 lg:pt-32"
           >
             Welcome to Misty Mrittika
-          </h1>
+          </h1></Fade>
+          <Fade>
           <p
             data-aos="fade-left"
             data-aos-duration="2000"
             data-aos-delay="2400"
             className="text-xl font-semibold text-orange-500 text-center pt-8"
           >
-            The home you are dreaming of is waiting for you
-          </p>
+            Crafts that touch your soul & mind
+          </p></Fade>
+          <Fade direction="up">
           <p
             data-aos="fade-up"
             data-aos-duration="2000"
             data-aos-delay="2800"
             className="text-xl w-4/5 mx-auto font-semibold text-orange-500 text-center pt-8"
           >
-            WE BELIEVE Every person deserves more than a mud hut with a thatched
-            roof. We believe that everyone should have a safe place to sleep and
-            a strong door to lock. This special place we call home gives us
-            dignity and hope.
-          </p>
+            WE CURATE INSPIRATION FOR THE HOME, CONNECTING THE CREATIVE WORK OF ARTISANS & DESIGNERS TO PEOPLE AND PLACES AROUND THE WORLD
+          </p></Fade>
         </div>
       </SwiperSlide>
       <SwiperSlide>

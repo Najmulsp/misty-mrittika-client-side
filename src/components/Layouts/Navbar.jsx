@@ -1,6 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import { Typewriter } from 'react-simple-typewriter';
+
 
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
@@ -124,8 +126,16 @@ const Navbar = () => {
           </ul>
         </div>
         <a className="btn btn-ghost text-2xl">
-          <span className="text-amber-400">Misty</span>{" "}
-          <span className="text-violet-600">Mrittika</span>
+          <span className="text-violet-600">
+            <Typewriter
+              words={['Misty Mrittika', 'Arts And Crafting']}
+              loop
+              cursor
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1000}              
+            />
+          </span>
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -145,9 +155,13 @@ const Navbar = () => {
                 } 
               />
             </div>
+            
+    
+          
             <button onClick={handleLogout} className="btn px-6 btn-warning">
               Log Out
             </button>
+            
           </div>
         ) : (
           <Link className="btn px-6 btn-success" to="/login">

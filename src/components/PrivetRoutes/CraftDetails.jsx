@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
+import { IoStar } from "react-icons/io5";
 const CraftDetails = () => {
   const { id } = useParams();
 
@@ -21,7 +21,7 @@ const CraftDetails = () => {
 
   return (
     <div className=" w-2/5 mx-auto mt-10">
-      <div className="card  mx-auto bg-base-100 shadow-xl">
+      <div className="card rounded-md  mx-auto bg-base-100 shadow-xl">
         <figure>
           <img
             src={craft?.[0].photo}
@@ -32,13 +32,20 @@ const CraftDetails = () => {
         <div className="card-body">
           <h2 className="card-title">
             {craft?.[0].name}
-            <div className="badge badge-secondary">NEW</div>
+            
           </h2>
           <div>
-            <p>Price: {craft?.[0].price}</p>
-            <p>Preparing Time: {craft?.[0].time}</p>
+            <div className="flex justify-between">
+            <p><span className="font-bold">Price: </span>{craft?.[0].price}</p>
+            <div className="flex items-center gap-1  w-1/5">
+              <p>Rating:
+              </p>
+              <IoStar className="text-orange-400" /><IoStar className="text-orange-400" /><IoStar className="text-orange-400" />
+              </div>
+            </div>
+            <p><span className="font-bold">Preparing Time: </span>{craft?.[0].time}</p>
           </div>
-          <p>Description: {craft?.[0].description}</p>
+          <p><span className="font-bold">Description: </span>{craft?.[0].description}</p>
         </div>
       </div>
     </div>
