@@ -24,7 +24,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: async() => fetch('http://localhost:5000/crafts')
+        loader: async() => fetch('https://misty-mrittika.vercel.app/crafts')
       },
       {
         path: "/craftDetails/:id",
@@ -37,17 +37,17 @@ const router = createBrowserRouter([
       {
         path: "/allCraft",
         element: <AllCraft></AllCraft> ,   
-        loader: () => fetch('http://localhost:5000/crafts'),
+        loader: () => fetch('https://misty-mrittika.vercel.app/crafts'),
       },
       {
         path: "/allCategories/:id",
         element: <AllCategories></AllCategories>,   
-        loader: ({params}) => fetch(`http://localhost:5000/allCategories/${params.id}`),
+        loader: ({params}) => fetch(`https://misty-mrittika.vercel.app/allCategories/${params.id}`),
       },
       {
         path: "/categoryDetails/:id",
         element: <CategoryDetails></CategoryDetails>,   
-        loader: ({params}) => fetch(`http://localhost:5000/allCategories/${params.id}`),
+        loader: ({params}) => fetch(`https://misty-mrittika.vercel.app/allCategories/${params.id}`),
       },
     {
       path: "/addCraft",

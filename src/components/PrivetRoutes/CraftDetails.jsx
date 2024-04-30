@@ -9,11 +9,11 @@ const CraftDetails = () => {
 
 
   useEffect(() => {
-    fetch(`http://localhost:5000/craftDetails/${id}`)
+    fetch(`https://misty-mrittika.vercel.app/craftDetails/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setCraft(data);
-        // console.log(data)
+       
       });
   }, []);
 

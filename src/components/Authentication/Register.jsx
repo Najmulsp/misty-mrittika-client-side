@@ -14,7 +14,7 @@ const Register = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    // console.log(email, password);
+    
     // clear error if no error
     setRegisterError("");
 

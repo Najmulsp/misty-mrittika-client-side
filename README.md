@@ -1,6 +1,6 @@
 # Misty Mrittika Ceramics Store
 
-## my website link: 
+## my website link: https://misty-mrittika.web.app
 
 #### Packages I have used:
 -React-simple-typewriter

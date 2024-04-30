@@ -3,7 +3,7 @@ import { IoStar } from "react-icons/io5";
 
 const CategoryDetails = () => {
     const categoryDetails = useLoaderData();
-    console.log(categoryDetails)
+    
     return (
         <div className=" w-2/5 mx-auto mt-10">
       <div className="card rounded-md  mx-auto bg-base-100 shadow-xl">

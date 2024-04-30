@@ -4,18 +4,18 @@ import { Link, useLoaderData } from "react-router-dom";
 const AllCategories = () => {
   const singleCategory = useLoaderData();
   const { subcategory } = singleCategory;
-  // console.log(subcategory)
+  
 
   const [crafts, setCrafts] = useState([]);
 
-  // console.log(crafts)
+  
 
   useEffect(() => {
-    fetch(`http://localhost:5000/subCategories`)
+    fetch(`https://misty-mrittika.vercel.app/subCategories`)
       .then((res) => res.json())
       .then((data) => {
         setCrafts(data);
-        //   console.log(data)
+        
       });
   }, []);
   // {user?.email}

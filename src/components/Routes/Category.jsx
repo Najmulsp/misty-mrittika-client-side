@@ -9,7 +9,7 @@ const Category = () => {
   
 
   useEffect(() => {
-    fetch("http://localhost:5000/subcategories")
+    fetch("https://misty-mrittika.vercel.app/subcategories")
       .then((res) => res.json())
       .then((data) => setSubcategories(data));
   }, []);
@@ -23,7 +23,7 @@ const Category = () => {
            key={category._id}
            
            >
-           <Link to={`/allCategories/${category._id}`}><article className="flex flex-col dark:bg-gray-50 w-80 lg:ml-16 mx-auto">
+           <Link to={`/allCategories/${category._id}`}><article className="flex flex-col w-80 lg:ml-16 mx-auto">
               <img
                   alt=""
                   className="object-cover w-full h-64 dark:bg-gray-500"
@@ -33,7 +33,10 @@ const Category = () => {
                 <h3 className="flex-1 py-2 text-lg text-center font-semibold leading-snug">
                 {category.subcategory}
                 </h3>
-                  <p className="text-center">21 items</p>                  
+                  <p className="text-center"> <span className="font-bold">Available items:</span> {category.items}<small> p</small>
+                  <br />
+                  in our store
+                  </p>                  
               </div>
             </article></Link> 
           </div>

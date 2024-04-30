@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import Swal from 'sweetalert2'
 import { AuthContext } from '../../providers/AuthProvider';
+import { Helmet } from 'react-helmet-async';
 
 
 const AddCraft = () => {
@@ -8,7 +9,7 @@ const AddCraft = () => {
 
     const handleAddCraft = e =>{
         e.preventDefault();
-        // get email of user
+        
         
 
         const email = user.email;
@@ -20,15 +21,15 @@ const AddCraft = () => {
         const description = e.target.description.value;
         const stockStatus = e.target.stockStatus.value;
         const userName = e.target.userName.value;
-        // const email = e.target.email.value;
+       
         const photo = e.target.photo.value;
         
         const newCraft = {name, subcategory, price, time, rating, description,stockStatus, userName, email,  photo }
 
-        // console.log(newCraft)
+    
         
         // send data to the server
-        fetch('http://localhost:5000/addCrafts', {
+        fetch('https://misty-mrittika.vercel.app/addCrafts', {
             method: 'POST',
             headers:{'content-type' : 'application/json'},
             body:JSON.stringify(newCraft)
@@ -48,11 +49,13 @@ const AddCraft = () => {
     }
   return (
     <div className="border rounded-xl w-3/5 mx-auto p-6 mt-8">
-
+<Helmet>
+        <title>Misty Mrittika/ Add Craft</title>
+      </Helmet>
       <div className="text-center">
         <div className="space-y-2 col-span-full  mb-4">
           <p className="font-medium">Add New Craft</p>
-          <p className="text-xs">Adipisci fuga autem eum!</p>
+          
         </div>
         <div className="grid grid-cols-2 gap-6 p-6 rounded-md shadow-sm ">
           <form onSubmit={handleAddCraft} className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
@@ -226,21 +229,7 @@ const AddCraft = () => {
               />
             </div>
 
-            {/* User Email */}
-            {/* <div className="col-span-full sm:col-span-3">
-              <label
-                htmlFor="website"
-                className="text-sm p-1 flex justify-start"
-              >
-                User Email
-              </label>
-              <input
-                name="email"
-                type="email"
-                placeholder="Your Email"
-                className="w-full border-2 rounded-md focus:ring focus:ring-opacity-75  focus:dark:ring-violet-600 dark:border-gray-300 p-3"
-              />
-            </div> */}
+            
             {/* photo url */}
             <div className="col-span-full">
               <label htmlFor="bio" className="text-sm p-1 flex justify-start">

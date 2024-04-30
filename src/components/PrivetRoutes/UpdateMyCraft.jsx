@@ -6,14 +6,14 @@ import Swal from "sweetalert2";
 const UpdateMyCraft = () => {
     const {id } = useParams();
     const [craft, setCraft] = useState();
-    // console.log(craft)
+   
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/singleCraft/${id}`)
+        fetch(`https://misty-mrittika.vercel.app/singleCraft/${id}`)
         .then(res => res.json())
         .then(data =>{
             setCraft(data)
-            // console.log(data)
+            
         })
     }, [id])
 
@@ -31,7 +31,7 @@ const UpdateMyCraft = () => {
 
         
         // send data to the server
-        fetch(`http://localhost:5000/updateCraft/${id}`, {
+        fetch(`https://misty-mrittika.vercel.app/updateCraft/${id}`, {
             method: "PUT",
             headers:{'content-type' : 'application/json'},
             body:JSON.stringify(updatedCraft)

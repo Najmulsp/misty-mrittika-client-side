@@ -48,7 +48,7 @@ const Home = () => {
                   ) : (
                     <p>{craft.description}</p>
                   )}
-                  {/* <p>{craft.description}</p> */}
+                  
                   <div className="card-actions justify-end">
                     <Link to={`/craftDetails/${craft._id}`}>
                       <button className="btn btn-primary">View Details</button>

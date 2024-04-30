@@ -6,10 +6,10 @@ import {
     signInWithEmailAndPassword,
     signInWithPopup,
     signOut,
-    // updateProfile,
+   
   } from "firebase/auth";
   import { createContext, useEffect, useState } from "react";
-//   import auth from "../../Firebase/FirebaseConfig";
+
   import PropTypes from "prop-types";
   import { getAuth } from "firebase/auth";
 import app from "../components/Firebase/Firebase.config";
@@ -23,7 +23,7 @@ import app from "../components/Firebase/Firebase.config";
   const githubProvider = new GithubAuthProvider();
   
   const AuthProvider = ({ children }) => {
-    // console.log(typeof children)
+   
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
   
@@ -35,15 +35,6 @@ import app from "../components/Firebase/Firebase.config";
       return createUserWithEmailAndPassword(auth, email, password);
     };
   
-    // update user profile
-    // const updateUserProfile = (name, photo) => {
-    //   return updateProfile(auth.currentUser, {
-    //     displayName: name,
-    //     photoURL: photo,
-    //   }).then(() => {
-    //     setUser({ ...user, displayName: name, photoURL: photo });
-    //   });
-    // };
   
     //  observer
     useEffect(() => {

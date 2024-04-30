@@ -21,8 +21,9 @@ const Banner = () => {
         data-aos-duration="2000"
         data-aos-delay="1000"
       >
-        {/* <div className='bg-[linear-gradient(45deg,rgba(0,0,0,0,0.9),rgba(0,0,0,0,0.4)),url("https://i.ibb.co/yV4vx7F/crafts-banner-image-1.jpg")] bg-no-repeat bg-cover rounded-xl   w-full h-[450px] lg:h-[550px]'> */}
-        <div className='bg-[url("https://i.ibb.co/yV4vx7F/crafts-banner-image-1.jpg")] bg-opacity-50  bg-no-repeat bg-cover rounded-xl   w-full h-[450px] lg:h-[550px]'>
+
+        <div className=' bg-opacity-25 bg-[url("https://i.ibb.co/yV4vx7F/crafts-banner-image-1.jpg")]  bg-no-repeat bg-cover rounded-xl   w-full h-[450px] lg:h-[550px] '>
+        
         <Fade direction="down">
           <h1
             data-aos="fade-right"
@@ -54,11 +55,11 @@ const Banner = () => {
       </SwiperSlide>
       <SwiperSlide>
         <img
-          className="w-full h-[450px] lg:h-[550px]  rounded-xl  mx-auto"
+          className="w-full h-[450px] lg:h-[550px] rounded-xl  mx-auto"
           src="https://i.ibb.co/PD2n1z7/crafts-banner-image-11.jpg"
-          // src="https://i.ibb.co/zrkfp9V/crafts-banner-image-2jpg.jpg"
           alt="real estate image"
         />
+       
       </SwiperSlide>
       <SwiperSlide>
         <img

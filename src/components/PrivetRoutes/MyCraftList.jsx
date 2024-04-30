@@ -2,13 +2,14 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const MyCraftList = () => {
   const { user } = useContext(AuthContext);
   const [myCraft, setMyCraft] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myCraftList/${user?.email}`)
+    fetch(`https://misty-mrittika.vercel.app/myCraftList/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setMyCraft(data);
@@ -26,7 +27,7 @@ const MyCraftList = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/deleteMyCraft/${id}`, {
+        fetch(`https://misty-mrittika.vercel.app/deleteMyCraft/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -47,7 +48,9 @@ const MyCraftList = () => {
   };
   return (
     <div>
-      
+      <Helmet>
+        <title>Misty Mrittika/ My Art & Craft List</title>
+      </Helmet>
       <div className="w-full  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-10 mx-auto gap-6 border justify-around">
         {myCraft.map((craft) => (
           <div key={craft._id}>
