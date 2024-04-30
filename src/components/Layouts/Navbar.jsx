@@ -126,7 +126,7 @@ const Navbar = () => {
           </ul>
         </div>
         <a className="btn btn-ghost text-2xl">
-          <span className="text-violet-600">
+          <span className="text-orange-400">
             <Typewriter
               words={['Misty Mrittika', 'Arts And Crafting']}
               loop

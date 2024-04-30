@@ -6,9 +6,7 @@ const CraftDetails = () => {
 
   const [craft, setCraft] = useState();
 
-  console.log("pawa jacche", craft);
-  console.log(typeof craft);
-  //  const {name} = craft;
+
 
   useEffect(() => {
     fetch(`http://localhost:5000/craftDetails/${id}`)

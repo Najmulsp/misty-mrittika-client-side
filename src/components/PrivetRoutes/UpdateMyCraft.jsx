@@ -6,14 +6,14 @@ import Swal from "sweetalert2";
 const UpdateMyCraft = () => {
     const {id } = useParams();
     const [craft, setCraft] = useState();
-    
+    // console.log(craft)
 
     useEffect(()=>{
         fetch(`http://localhost:5000/singleCraft/${id}`)
         .then(res => res.json())
         .then(data =>{
             setCraft(data)
-            console.log(data)
+            // console.log(data)
         })
     }, [id])
 

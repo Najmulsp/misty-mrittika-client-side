@@ -1,10 +1,11 @@
-import { FaHome } from "react-icons/fa";
+import { GiPaintedPottery } from "react-icons/gi";
 
 const Footer = () => {
     return (
         <footer className="footer p-10 bg-base-200 text-base-content mt-10">
   <aside>
-  <FaHome className="text-5xl"/>
+  {/* <GiPaintedPottery /> */}
+  <GiPaintedPottery className="text-5xl text-orange-300"/>
     <p className="text-3xl">Misty Mrittika <span className="text-xl">Arts And Crafting</span>
     <br/>
     <span className="text-2xl">©2021 Misty Mrittika. ALL RIGHTS RESERVED.</span>

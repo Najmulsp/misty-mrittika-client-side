@@ -11,6 +11,7 @@ import UpdateMyCraft from "../PrivetRoutes/UpdateMyCraft";
 import AllCraft from "./AllCraft";
 import CraftDetails from "../PrivetRoutes/CraftDetails";
 import AllCategories from "./AllCategories";
+import CategoryDetails from "./CategoryDetails";
 
 
 
@@ -39,9 +40,14 @@ const router = createBrowserRouter([
         loader: () => fetch('http://localhost:5000/crafts'),
       },
       {
-        path: "/allCategories",
+        path: "/allCategories/:id",
         element: <AllCategories></AllCategories>,   
-        loader: () => fetch('http://localhost:5000/subcategories'),
+        loader: ({params}) => fetch(`http://localhost:5000/allCategories/${params.id}`),
+      },
+      {
+        path: "/categoryDetails/:id",
+        element: <CategoryDetails></CategoryDetails>,   
+        loader: ({params}) => fetch(`http://localhost:5000/allCategories/${params.id}`),
       },
     {
       path: "/addCraft",
