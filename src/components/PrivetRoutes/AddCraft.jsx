@@ -48,7 +48,7 @@ const AddCraft = () => {
         })
     }
   return (
-    <div className="border rounded-xl w-3/5 mx-auto p-6 mt-8">
+    <div className="border rounded-xl w-4/5 lg:w-3/5 mx-auto p-6 mt-8">
 <Helmet>
         <title>Misty Mrittika/ Add Craft</title>
       </Helmet>
