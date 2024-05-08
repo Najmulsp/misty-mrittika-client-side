@@ -1,8 +1,8 @@
 const Faq = () => {
   return (
-    <div className="container mx-auto px-8 lg:px-24 flex flex-col-reverse lg:flex-row dark:bg-gray-100 dark:text-gray-800 justify-around items-center pb-4">
+    <div className="w-[95%] mx-auto  flex flex-col-reverse lg:flex-row dark:bg-rose-50 dark:text-gray-800 justify-around items-center pb-4">
         <div>
-            <div className="lg:pl-16 ">
+            <div className="ml-10">
                 <p className="text-xl font-semibold pb-3">Help Topics</p>
                 <div className="space-y-1">
                 <a href="#">Careers</a><br />
@@ -17,7 +17,7 @@ const Faq = () => {
         </div>
         
       <section className=" flex-1">
-        <div className="container flex flex-col justify-center p-4 mx-auto md:p-8">
+        <div className="container flex flex-col justify-center mx-auto py-6">
           <h2 className="mb-12 text-4xl font-bold leading-none text-center sm:text-5xl">
             Frequently Asked Questions
           </h2>

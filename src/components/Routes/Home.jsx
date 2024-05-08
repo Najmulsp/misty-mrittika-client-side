@@ -27,9 +27,9 @@ const Home = () => {
         <div className="container md:w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-10 mx-auto gap-6 justify-around">
           {craftItems.map((craft) => (
             <div key={craft._id}>
-              <div className="card rounded-md w-96 md:w-80 lg:w-96 bg-base-100 shadow-xl mx-auto">
+              <div className="card rounded-md w-96 md:w-80 lg:w-96 bg-base-100 shadow-xl mx-auto ">
                 <figure>
-                  <img src={craft.photo} alt="images" className="h-72 w-full" />
+                  <img src={craft.photo} alt="images" className="h-72 w-full myChoice" />
                 </figure>
                 <div className="card-body">
                   <h2 className="card-title">

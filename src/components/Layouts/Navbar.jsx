@@ -37,7 +37,7 @@ const Navbar = () => {
       <li>
         <NavLink
           className={({ isActive }) =>
-            isActive ? "border-2 border-amber-400  font-bold" : ""
+            isActive ? "px-2 lg:px-4  py-2 rounded-lg bg-rose-300 font-bold dark:text-black" : ""
           }
           to="/"
         >
@@ -47,17 +47,7 @@ const Navbar = () => {
       <li>
         <NavLink
           className={({ isActive }) =>
-            isActive ? "border-2 border-amber-400  font-bold" : ""
-          }
-          to="/allCraft"
-        >
-          All Art & craft
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? "border-2 border-amber-400  font-bold" : ""
+            isActive ? "px-2 lg:px-4  py-2 rounded-lg bg-rose-300 font-bold dark:text-black" : ""
           }
           to="/addCraft"
         >
@@ -67,7 +57,7 @@ const Navbar = () => {
       <li>
         <NavLink
           className={({ isActive }) =>
-            isActive ? "border-2 border-amber-400  font-bold" : ""
+            isActive ? "px-2 lg:px-4  py-2 rounded-lg bg-rose-300 font-bold dark:text-black" : ""
           }
           to="/myCraftList"
         >
@@ -77,7 +67,7 @@ const Navbar = () => {
       <li>
         <NavLink
           className={({ isActive }) =>
-            isActive ? "border-2 border-amber-400  font-bold" : ""
+            isActive ? "px-2 lg:px-4  py-2 rounded-lg bg-rose-300 font-bold dark:text-black" : ""
           }
           to="/login"
         >
@@ -87,7 +77,7 @@ const Navbar = () => {
       <li>
         <NavLink
           className={({ isActive }) =>
-            isActive ? "border-2 border-amber-400  font-bold" : ""
+            isActive ? "px-2 lg:px-4  py-2 rounded-lg bg-rose-300 font-bold dark:text-black" : ""
           }
           to="/register"
         >
@@ -99,9 +89,9 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100 z-30">
+    <div className="navbar container mx-auto px-8 bg-base-100 z-30">
       <div className="navbar-start">
-        <div className="dropdown">
+        <div className="dropdown z-50">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -120,13 +110,13 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1000] p-2 shadow bg-base-100 rounded-box w-52"
+            className="dropdown-content mt-3 z-[1] pl-4 py-4 shadow bg-rose-50 rounded-box w-52 space-y-3 "
           >
             {navlinks}
           </ul>
         </div>
         <a className="btn btn-ghost text-2xl">
-          <span className="text-orange-400">
+          <span className="text-rose-400">
             <Typewriter
               words={['Misty Mrittika', 'Arts And Crafting']}
               loop
@@ -139,7 +129,7 @@ const Navbar = () => {
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{navlinks}</ul>
+        <ul className="flex gap-4  px-1">{navlinks}</ul>
       </div>
        <div className="navbar-end  gap-4">
          {user ? (
@@ -155,20 +145,44 @@ const Navbar = () => {
                 } 
               />
             </div>
-            
-    
-          
-            <button onClick={handleLogout} className="btn px-6 btn-warning">
+            <button onClick={handleLogout} className="btn px-6 bg-rose-300 dark:text-black">
               Log Out
-            </button>
-            
+            </button>            
           </div>
         ) : (
           <Link className="btn px-6 btn-success" to="/login">
             Login
           </Link>
         )}
-
+         {/* {user ? (
+          <div id="profileImg">
+            <img
+              
+              className="w-10 md:w-12 lg:w-14  rounded-full"
+              alt="profile picture"
+              src={
+                user?.photoURL ||
+                "https://i.ibb.co/RPpmvwb/images-blank-profile.png"
+              }
+            />
+            
+            <div
+              id="dropdown"
+              className=" w-40 rounded-lg"
+            >
+              <h1 className="py-2 bg-rose-300 rounded-lg text-center font-semibold  w-full">
+                {user.displayName || "user name not found"}
+              </h1>
+              <button onClick={handleLogout} className="btn border-collapse w-full bg-pink-300">
+                Log Out
+              </button>
+            </div>
+          </div>
+        ) : (
+          <Link className="btn px-6 btn-success" to="/login">
+            Login
+          </Link>
+        )} */}
         <label className="swap swap-rotate">
            {/* this hidden checkbox controls the state  */}
           <input

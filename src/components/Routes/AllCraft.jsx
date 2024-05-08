@@ -6,7 +6,7 @@ const AllCraft = () => {
     const allCraft = useLoaderData();
     
     return (
-        <div className="w-full  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-10 mx-auto gap-6 border justify-around">
+        <div className="w-full  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-10 mx-auto gap-6 justify-around">
           <Helmet>
         <title>Misty Mrittika/ All Art & craft</title>
       </Helmet>

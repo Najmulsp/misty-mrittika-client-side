@@ -5,7 +5,7 @@ import { GiStorkDelivery } from "react-icons/gi";
 
 const WhyChooseUs = () => {
     return (
-        <section className="m-4 md:m-8 py-6 dark:bg-gray-100 dark:text-gray-800">
+        <section className="m-4 md:m-8 py-6 dark:bg-rose-50 dark:text-gray-800">
 	<div className="container mx-auto p-4 my-6 space-y-2 text-center">
 		<h2 className="text-5xl font-bold">Why Choose Us</h2>
 		<p className="dark:text-gray-600 text-center w-2/6 mx-auto py-3">WE CURATE INSPIRATION FOR THE HOME, CONNECTING THE CREATIVE WORK OF ARTISANS & DESIGNERS TO PEOPLE AND PLACES AROUND THE WORLD</p>

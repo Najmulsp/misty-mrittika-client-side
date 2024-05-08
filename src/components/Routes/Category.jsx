@@ -17,13 +17,13 @@ const Category = () => {
   return (
     <div>
       <h1 className="text-center text-4xl font-bold">Browse by Category</h1>
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-10 justify-around gap-6 ">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-10 justify-around gap-6 ">
         {categories.slice(0, 6).map((category) => (
           <div
-           key={category._id}
-           
-           >
-           <Link to={`/allCategories/${category._id}`}><article className="flex flex-col w-80 lg:ml-16 mx-auto">
+            key={category._id}
+            
+            >
+            <Link to={`/allCategories/${category._id}`}><article className="flex flex-col w-80 mb-6  mx-auto hover:scale-[1.05] transition-all shadow-lg">
               <img
                   alt=""
                   className="object-cover w-full h-64 dark:bg-gray-500"
